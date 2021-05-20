@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  mvc:
+    view:
+      prefix: spring.mvc.view.suffix
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.101.161.70:3306/inventory_management?characterEncoding=GBK&serverTimezone=UTC
+    password: root
+    username: root
+#  resources:
+#    static-locations: /tempaltes/
+mybatis:
+  mapper-locations: classpath*:mappers/**/*.xml
+  type-aliases-package: inventorymanagementsystem.entity
+#  src\main\java\com\inventorymanagementsystem\entity
+
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
